@@ -3,8 +3,10 @@ package sanix.springframework.didemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import sanix.springframework.didemo.controllers.ConstructorInjectedController;
 import sanix.springframework.didemo.controllers.MyController;
 import sanix.springframework.didemo.controllers.PropertyInjectedController;
+import sanix.springframework.didemo.controllers.SetterInjectedController;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -16,6 +18,9 @@ public class DiDemoApplication {
 		MyController controller =(MyController) ctx.getBean("myController");
 		controller.hello();
 
+		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
+		System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
+		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 	}
 
 }

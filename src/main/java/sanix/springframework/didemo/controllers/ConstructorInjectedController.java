@@ -1,7 +1,9 @@
 package sanix.springframework.didemo.controllers;
 
+import org.springframework.stereotype.Controller;
 import sanix.springframework.didemo.services.GreetingService;
 
+@Controller
 public class ConstructorInjectedController {
 
     private GreetingService greetingService;
@@ -11,7 +13,7 @@ public class ConstructorInjectedController {
     }
 
 
-    String sayHello(){
+    public String sayHello(){
         return greetingService.sayGreeting();
     }
 }
