@@ -16,7 +16,6 @@ public class SetterInjectedControllerTest {
         this.setterInjectedController.setGreetingService(new GreetingServiceImpl());
     }
 
-
     @Test
     public void testGreeting() throws Exception{
         assertEquals(GreetingServiceImpl.HELLO_GURUS, setterInjectedController.sayHello());
