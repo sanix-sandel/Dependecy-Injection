@@ -10,6 +10,7 @@ public class ConstructorInjectedController {
         this.greetingService=greetingService;
     }
 
+
     String sayHello(){
         return greetingService.sayGreeting();
     }
